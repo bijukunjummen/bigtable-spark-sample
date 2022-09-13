@@ -32,7 +32,7 @@ Execute the following `sbt` command to assemble the sample applications as a sin
 ./mvnw clean package
 ```
 
-The above command should build `target/scala-2.11/bigtable-spark-samples-assembly-0.1.jar` file.
+The above command should build `target/scala-2.12/jars/bigtable-spark-samples-1.0.0-SNAPSHOT.jar` file.
 
 Set the following environment variable to reference the assembly file.
 
