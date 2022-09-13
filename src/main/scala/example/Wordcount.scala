@@ -16,6 +16,7 @@
 package example
 
 import com.google.cloud.bigtable.hbase.BigtableConfiguration
+import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.hbase.client._
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.hbase.mapreduce.TableOutputFormat
@@ -39,7 +40,7 @@ object Wordcount extends App {
 
   val (projectId, instanceId, table, file) = parse(args)
 
-  var hConf = BigtableConfiguration.configure(projectId, instanceId)
+  var hConf: Configuration = BigtableConfiguration.configure(projectId, instanceId)
   hConf.set(TableOutputFormat.OUTPUT_TABLE, table)
 
   import org.apache.hadoop.mapreduce.Job

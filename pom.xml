@@ -20,7 +20,7 @@
     <scala-maven-plugin.version>4.7.1</scala-maven-plugin.version>
     <spark.version>3.3.0</spark.version>
     <commons.math3.version>3.6.1</commons.math3.version>
-    <bigtable.hbase.version>2.6.0</bigtable.hbase.version>
+    <bigtable.hbase.version>2.6.1</bigtable.hbase.version>
     <hbase.version>2.4.13</hbase.version>
     <spark.shade.packageName>org.myproject</spark.shade.packageName>
     <jars.target.dir>${project.build.directory}/scala-${scala.binary.version}/jars</jars.target.dir>
@@ -101,6 +101,11 @@
       <groupId>com.google.cloud.bigtable</groupId>
       <artifactId>bigtable-hbase-2.x-hadoop</artifactId>
       <version>${bigtable.hbase.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.cloud.bigtable</groupId>
+      <artifactId>bigtable-client-core</artifactId>
+      <version>1.27.1</version>
     </dependency>
   </dependencies>
 
